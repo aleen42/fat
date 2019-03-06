@@ -26,6 +26,7 @@
     "react": "16.8.4",
     "storm-react-diagrams": "5.2.1",
     "react-dom": "16.8.4",
-    "viz.js": "2.1.2"
+    "graphlib-dot": "0.6.2",
+    "lodash": "4.17.11"
   }
 }
