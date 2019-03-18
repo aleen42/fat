@@ -1,0 +1,39 @@
+.srd-group {
+    &__name {
+        font-size: 20px;
+        text-align: right;
+    }
+
+    &__wrapper {
+        margin: 10px 0;
+        opacity: 1;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        border: solid 2px black;
+    }
+
+    &__child {
+        display: flex;
+        align-items: center;
+
+        .srd-default-node {
+            margin: 5px 0;
+        }
+    }
+
+    &__col {
+        &:not(:first-child) {
+            margin-left: 100px;
+        }
+
+        .srd-default-node {
+            &.srd-group__wrapper {
+                margin: 5px 0;
+            }
+        }
+
+        width: 100%;
+        padding: 0 5px;
+    }
+}

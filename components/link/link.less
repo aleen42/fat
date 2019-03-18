@@ -1,0 +1,40 @@
+.srd-default-link {
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 24;
+        }
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    path {
+        &:not(.srd-default-link__fat_path-selected ) {
+            stroke: rgba(255, 255, 255, 0.3);
+        }
+        fill: none;
+        pointer-events: all;
+    }
+
+    &__fat_path-selected {
+        stroke-dasharray: 10, 2;
+        animation: dash 1s linear infinite;
+    }
+
+    &__label {
+        pointer-events: none;
+
+        > div {
+            display: inline-block;
+            position: absolute;
+        }
+    }
+
+    &__point {
+        fill: rgba(white, 0.5);
+    }
+
+    &--point-selected {
+        fill: rgb(0, 192, 255);
+    }
+}

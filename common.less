@@ -1,0 +1,63 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fat-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgba(255, 255, 255, 0.3);
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 48px;
+}
+
+.fat-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .srd-diagram {
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
+        background-size: 50px 50px;
+    }
+
+    .srd-default-node {
+        width: min-content;
+        filter: grayscale(1);
+        transition: all 500ms ease;
+
+        &:hover,
+        &__path-selected {
+            filter: grayscale(0);
+        }
+
+        &__name {
+            padding: 5px 30px;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+
+    .srd-group__name {
+        padding: 5px 30px;
+    }
+}
+
+.clearfix {
+    zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
